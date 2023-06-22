@@ -1,0 +1,29 @@
+.sidenav {
+	height: 730px;
+	position: relative;
+	background-color: #ffddee;
+	border-radius: 10px;
+}
+
+body {
+	width:fit-content;
+}
+
+.sidenav a {
+	text-decoration: none;
+	font-size: 30px;
+	font-family: sans-serif;
+	color: black;
+
+}
+
+.child {
+	position: relative;
+	top: 95px;
+	padding: 27px;
+}
+
+.sidenav img {
+	height: 20px;
+	top: 10px;
+}

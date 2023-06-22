@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="www.themeleaf.org">
+<link rel="stylesheet" href="signup.css">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<header th:insert="Header.html"> </header>
+<body>
+	<div class="signupFrm">
+		<form action="/signup" class="form" method="post">
+			<h1 class="title">Sign up</h1>
+     <div style="color:green">[[${message}]]</div>
+     <br>
+			<div class="inputContainer">
+				<input type="text" name="email" class="input" placeholder="Email" autocomplete="off">
+				<label for="" class="label"></label>
+			</div>
+				<div class="inputContainer">
+				<input type="text" name="fname" class="input" placeholder="FirstName" autocomplete="off">
+				<label for="" class="label"></label>
+			</div>
+				<div class="inputContainer">
+				<input type="text" name="lname" class="input" placeholder="LastName" autocomplete="off">
+				<label for="" class="label"></label>
+			</div>
+
+			<div class="inputContainer">
+				<input type="text" name="Username" class="input" autocomplete="off"
+					placeholder="Username"> <label for="" class="label"></label>
+			</div>
+
+			<div class="inputContainer">
+				<input type="text" name="Password" class="input" autocomplete="off"
+					placeholder="password"> <label for="" class="label"></label>
+			</div>
+
+			<div class="inputContainer">
+				<input type="text" name="Re_Password" class="input" autocomplete="off"
+					placeholder="Confirm Password"> <label for="" class="label"></label>
+			</div>
+
+			<div class="inputContainer">
+
+				<textarea name="description" autocomplete="off"
+				placeholder="Tell us about yourself..." cols="52" rows="4"> </textarea>
+				
+			</div>
+
+			<input type="submit" class="submitBtn" value="Sign up">
+		</form>
+	</div>
+
+</body>
+</html>

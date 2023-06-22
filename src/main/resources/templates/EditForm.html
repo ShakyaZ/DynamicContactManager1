@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="www.themeleaf.org">
+<head>
+<link rel="stylesheet" href="EditForm.css">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<header th:insert="NewDesign.html"> </header>
+<body th:object="${r_user}">
+	<form action="/edit" method="post" class="try"
+		enctype="Multipart/form-data">
+
+		<div class="inside">
+			<img src="/images/Profiles.png" alt=""><input type="text"
+				class="box" th:field="*{c_name}" name="c_name"><br> <br>
+			<br> <img src="/images/Profiles.png" alt=""><input
+				type="text" class="box" th:field="*{n_name}" name="n_name"><br>
+			<br> <br> <img src="/images/Phone.png" alt=""><input
+				type="text" class="box" th:field="*{number}" name="number"
+				placeholder="Enter Contact number"><br> <br> <br>
+			<img src="/images/Email.png" alt=""><input type="text"
+				class="box" th:field="*{email}" name="email"><br> <br>
+			<br> <img src="/images/ShowContacts.png" alt=""><input
+				type="text" class="box" th:field="*{experience}" name="experience"><br>
+			<br> <br> <input type="hidden" name="userinfo"
+				th:value="${UID}">
+			<div class="btn">
+				<input type="file" name="profile"><br> <br> <input
+					type="submit" class="sub" value="Submit">
+			</div>
+		</div>
+
+		<input type="hidden" th:field="*{id}" name="id"> <input
+			type="hidden" th:field="*{userinfo.id}">
+
+
+	</form>
+</body>
+</html>

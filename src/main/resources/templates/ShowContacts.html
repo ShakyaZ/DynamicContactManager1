@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="www.themeleaf.org">
+<head>
+<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="ShowContacts.css">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<header th:insert="NewDesign.html"></header>
+
+	<!-- Latest compiled and minified CSS -->
+	
+	<!-- jQuery library -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	<div style="color: green;">[[${message}]]</div>
+
+	<table id="emptable" class="table table-striped bodies">
+		<thead>
+			<tr class="red">
+				<th>C_name</th>
+				<th>N_name</th>
+				<th>Experience</th>
+				<th>Email</th>
+				<th>NUMBER</th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="u : ${hello}">
+				<td>[[${u.getC_name}]]</td>
+				<td>[[${u.getN_name}]]</td>
+				<td><p>[[${u.getExperience}]]</p></td>
+				<td><a th:href="@{/detail(id=${u.getId})}">[[${u.getEmail}]]</a></td>
+				<td>[[${u.getNumber}]]</td>
+				<td class="btnn"><a th:href="@{/edit(id=${u.getId})}"><input
+						type="submit" value="edit" class="btn btn success"></a></td>
+				<td class="btnn"><a th:href="@{/delete(id=${u.getId})}"><input
+						type="submit" value="delete" class="btn btn success"></a></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#emptable').DataTable();
+		});
+	</script>
+</body>
+</html>

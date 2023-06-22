@@ -1,0 +1,60 @@
+.try {
+	height: max-content;
+	width: 100%;
+	top: 20px;
+}
+
+.inherit {
+	width: max-content;
+}
+
+body {
+	background-color: skyblue;
+	height: 300px;
+	width: auto;
+}
+
+.inside {
+	position: absolute;
+	top: 65px;
+	left: 580px;
+	border: beige;
+	width: 600px;
+	height: 651px;
+	background-color: silver;
+	border-radius: 10px;
+	box-shadow: 3px;
+}
+
+.box {
+	padding: 22px;
+	margin-left: 10px;
+	padding-right: 206px;
+}
+
+.try img {
+	height: 15px;
+}
+
+html {
+	height: inherit;
+}
+
+.btn {
+	left: 26px;
+	position: absolute;
+}
+
+.sub {
+	background-color: orange;
+	padding: 10px;
+	border-radius: 20px;
+	margin-left: 160px;
+	border-radius: 20px;
+}
+
+.whole {
+	height: min-content;
+	border-color: black;
+	border-radius: 10px;
+}

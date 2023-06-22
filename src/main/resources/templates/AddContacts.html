@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="www.themeleaf.org">
+<head>
+<link rel="stylesheet" href="AddContacts.css">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<header th:insert="NewDesign.html" ></header>
+
+<body>
+
+<div class="whole">
+	<form action="/addcontacts" method="post" class="try"
+		enctype="Multipart/form-data">
+		<div style="color: green;">[[${success}]]</div>
+		<div class="inside">
+			<img src="/images/Profiles.png" alt=""><input type="text"
+				class="box" name="c_name" placeholder="Enter Contact Name"><br>
+			<br> <br> <img src="/images/Profiles.png" alt=""><input
+				type="text" class="box" name="n_name" placeholder="Enter Nick Name"><br>
+			<br> <br> <img src="/images/Phone.png" alt=""><input
+				type="text" class="box" name="number"
+				placeholder="Enter Contact number"><br> <br> <br>
+			<img src="/images/Email.png" alt=""><input type="text"
+				class="box" name="email" placeholder="Enter Email Address"><br>
+			<br> <br> <img src="/images/ShowContacts.png" alt=""><input
+				type="text" class="box" name="experience"
+				placeholder="Enter Work Experience"><br> <br> <br>
+
+			<input type="hidden" name="userinfo" th:value="${UID}">
+			<div class="btn">
+				<input type="file" name="profile"><br> <br> <input
+					type="submit" class="sub" value="Submit">
+			</div>
+		</div>
+
+
+	</form>
+	</div>
+
+</body>
+</html>
