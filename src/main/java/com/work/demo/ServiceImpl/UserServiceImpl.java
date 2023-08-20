@@ -24,7 +24,6 @@ public class UserServiceImpl implements UserService {
 
 	}
 
-
 	@Override
 	public UserContacts getUserContact(int id) {
 	 UserContacts u = 	CR.getById(id);
